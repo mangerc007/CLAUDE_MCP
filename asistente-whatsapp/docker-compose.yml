@@ -1,0 +1,12 @@
+services:
+  asistente:
+    build: .
+    ports:
+      - "${PORT:-8000}:8000"
+    env_file:
+      - .env
+    environment:
+      PORT: 8000
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped

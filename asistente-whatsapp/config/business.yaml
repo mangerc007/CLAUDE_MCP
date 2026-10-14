@@ -1,0 +1,36 @@
+# Configuracion del Asistente de Manger
+# Todo lo que el asistente sabe "de memoria" sale de aca. Editalo sin tocar el codigo.
+
+asistente:
+  nombre: "Asistente de Manger"
+  dueno: "Manger"
+  rol_dueno: "Customer Success Manager de emBlue"
+  empresa: "emBlue"
+  tono: "amigable y cercano"
+
+agenda:
+  zona_horaria: "America/Lima"
+  # 0 = lunes ... 6 = domingo
+  dias_laborales: [0, 1, 2, 3, 4]
+  hora_inicio: "09:30"
+  hora_fin: "16:00"          # la ultima reunion empieza a las 15:30
+  duracion_minutos: 30
+  anticipacion_minima_horas: 2
+  dias_a_buscar: 7           # cuantos dias hacia adelante ofrece horarios
+  maximo_por_dia: 4          # cuantos horarios ofrece por dia, para no saturar el chat
+
+# Plazos estandar que el asistente PUEDE informar.
+# Completalos con los tiempos reales. Si un plazo no esta en esta lista, el asistente
+# no lo inventa: dice que lo confirmas tu y te avisa.
+plazos_estandar:
+  - tema: "Ejemplo — reemplazar: Onboarding de una cuenta nueva"
+    plazo: "COMPLETAR"
+  - tema: "Ejemplo — reemplazar: Respuesta de soporte a un ticket"
+    plazo: "COMPLETAR"
+
+# Cuando el asistente detecta alguna de estas situaciones, te avisa por WhatsApp.
+avisar_por:
+  - precio: "Cualquier consulta sobre precios, planes, descuentos, cotizaciones o facturacion de montos"
+  - queja: "Quejas, molestia o insatisfaccion del cliente"
+  - riesgo_baja: "Señales de que el cliente quiere cancelar, bajar de plan o irse a la competencia"
+  - upsell: "Interes en mas funcionalidades, mas volumen, nuevos canales o renovacion"
