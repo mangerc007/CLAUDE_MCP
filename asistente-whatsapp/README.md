@@ -43,6 +43,7 @@ cp .env.example .env        # y completa las claves
 
 ```bash
 python -m pytest tests/test_unitarios.py      # pruebas sin red
+python tests/test_local.py --demo             # chat con cuenta y agenda simuladas (solo OPENAI_API_KEY)
 python tests/test_local.py                    # chat en la terminal, como contacto no registrado
 python tests/test_local.py 51987654321        # chat como un cliente de la tabla cuentas
 uvicorn agent.main:app --reload               # servidor; GET / muestra el estado
